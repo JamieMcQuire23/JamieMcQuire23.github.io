@@ -25,11 +25,11 @@ disableKinds = ["taxonomy", "term"]
   [[params.socialIcons]]
     icon = "fas fa-envelope"
     title = "E-mail"
-    url = "mailto:mail@example.com"
+    url = "mailto:jamiemcquire23@gmail.com"
   [[params.socialIcons]]
     icon = "ai ai-google-scholar"
     title = "Scholar"
-    url = "https://scholar.google.com/"
+    url = "https://scholar.google.com/citations?user=t_TC_vYAAAAJ&hl=en&oi=ao"
 
 # Social Links
 [params.social]
