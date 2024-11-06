@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang=""><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=53241&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title></title>
+    <meta name="description" content="Data Scientist | PhD Computer Science | ex-Expedia">
+    <meta name="author" content=''>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" integrity="sha512-rt/SrQ4UNIaGfDyEXZtNcyWvQeOq0QLygHluFQcSjaGB04IxWhal71tKuzP6K8eYXYB6vJV4pHkXcmFGGQ1/0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.3/css/academicons.min.css" integrity="sha512-vaoopdl+FJahyY2ddhsbDj8yDiRuyUYH/vIjF3z+cBg0sKc07NAQmUYli8volCGlW9OwlQyjVsr7Lh6qAManlw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/sass/researcher.min.css">
+    </head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css" integrity="sha512-t2ALGTyUR6g1HJiHCmSTge2yGseGofdO88Q+zOWQx/N0ikecVw0YuyOet9xZDV8+Vx0Y0n1a3f3Qx3V9CcnsKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js" integrity="sha512-EKW5YvKU3hpyyOcN6jQnAxO/L8gts+YdYV6Yymtl8pk9YlYFtqJgihORuRoBXK8/cOIlappdU6Ms8KdK6yBCgA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js" integrity="sha512-iWiuBS5nt6r60fCz26Nd0Zqe0nbk1ZTIQbl3Kv7kYsX+yKMUFHzjaH2+AnM6vp2Xs+gNmaBAVWJjSmuPw76Efg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "\\[", right: "\\]", display: true},
+                {left: "$", right: "$", display: false},
+                {left: "\\(", right: "\\)", display: false}
+            ]
+        });
+    });
+</script>
+
+    <body><div class="container mt-5">
+    <nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0">
+        <a class="navbar-brand mx-0 mr-sm-auto" href="http://localhost:53241/" title="Jamie McQuire">
+          
+          Jamie McQuire
+        </a>
+        <div class="navbar-nav flex-row flex-wrap justify-content-center">
+            
+                
+                
+                    <a class="nav-item nav-link" href="/" title="About">
+                        About
+                    </a>
+                    
+                        <span class="nav-item navbar-text mx-1">/</span>
+                    
+                
+                    <a class="nav-item nav-link" href="/resume.pdf" title="Resume">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm7.5 1.5v-2l3 3h-2a1 1 0 0 1-1-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm2 5.755S12 12 8 12s-5 1.755-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-.245z"/></svg> Resume
+                    </a>
+                    
+                        <span class="nav-item navbar-text mx-1">/</span>
+                    
+                
+                    <a class="nav-item nav-link" href="/blog" title="Blog">
+                        Blog
+                    </a>
+                    
+                        <span class="nav-item navbar-text mx-1">/</span>
+                    
+                
+                    <a class="nav-item nav-link" href="/contact" title="Contact">
+                        Contact
+                    </a>
+                    
+                
+            
+        </div>
+    </nav>
+</div>
+<hr>
+<div id="content">
+<div class="container">
+    <h1 id="vits-for-wearable-sensor-spectrogram-analysis-with-deseptr">ViTs for Wearable Sensor Spectrogram Analysis with DeSepTr</h1>
+<p>This is a blog that I have wrote in conjunction with my paper: <a href="https://ieeexplore.ieee.org/document/10208059/citations?tabFilter=papers#citations">A Data Efficient Vision Transformer for Robust Human Activity Recognition from the Spectrograms of Wearable Sensor Data</a>. If you would like access feel free to reach out!</p>
+<p>In this blog, I am going to provide the code for implementing the Data Efficient Separable Transformer (DeSepTr). This is a modification of the <a href="https://arxiv.org/abs/2203.09581">Separable Transformer (SepTr)</a> [1] which was developed for analyzing wearable sensor spectrograms with computer vision (CV) techniques. The research application of this paper was for wearable sensor analysis, however, I&rsquo;m sure someone can reapply this work to audio and compare to the original SepTr.</p>
+<hr>
+<h2 id="background">Background</h2>
+<p>I presented this work at the 2023 IEEE Statistical Signal Processing Workshop (SSP) in Hanoi, Vietnam. The presentation format was a <a href="/blog/academic/deseptr/poster.pdf">poster</a> with a short paper published in the proceedings. Visiting Hanoi was an amazing academic, cultural, and historical experience! I had an amazing time meeting collegues from all over the world and discussing novel ideas related to signal procesisng.</p>
+<table>
+  <tr>
+    <td><img src="/blog/academic/deseptr/vietnam1.jpg" alt="Hanoi, Vietnam" width="300"/></td>
+    <td><img src="/blog/academic/deseptr/vietnam2.jpg" alt="IEEE SSP 2024" width="300"/></td>
+  </tr>
+</table>
+<hr>
+<h2 id="introduction">Introduction</h2>
+<h3 id="vision-transformers">Vision Transformers</h3>
+<p><a href="https://arxiv.org/pdf/2010.11929">Vision Transformers (ViTs)</a> [2] are a fast emerging framework for computer vision (CV) based on the <a href="https://arxiv.org/pdf/1706.03762">transformer</a> [3] that leverages multi-head attention (MHA) to weight the importance of each input. This enables the full image-context to be utilised and overcomes issues faced by convolutional neural networks (CNNs). A limitation of ViTs that can cause performance degradations is the weak inductive bias of the model which can cause over-fitting to the training data.</p>
+<div style="text-align: center;">
+  <img src="/blog/academic/deseptr/vit.png" alt="vit">
+  <figcaption>Figure 1. Diagram of the ViT [2]</figcaption>
+</div>
+<br>
+<p>In our experiments, we implemented the ViT in the TensorFlow framework with the following code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">ViT</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Layer</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="bp">self</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">input_dim</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">patch_size</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">embed_dim</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">num_layers</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">num_heads</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">mlp_dims</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">dropout_rate</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="o">**</span><span class="n">kwargs</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">super</span><span class="p">(</span><span class="n">ViT</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">num_patches</span> <span class="o">=</span> <span class="n">input_dim</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">input_dim</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span> <span class="o">=</span> <span class="n">embed_dim</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">input_norm</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">LayerNormalization</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="n">epsilon</span><span class="o">=</span><span class="mf">1e-6</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">patches</span> <span class="o">=</span> <span class="n">PatchProjection</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span><span class="p">,</span> <span class="n">patch_size</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">class_emb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_weight</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;class_emb&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">initializer</span><span class="o">=</span><span class="s1">&#39;uniform&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">trainable</span><span class="o">=</span><span class="kc">True</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">pos_emb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_weight</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;position_emb&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_patches</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">initializer</span><span class="o">=</span><span class="s1">&#39;uniform&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">trainable</span><span class="o">=</span><span class="kc">True</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span> <span class="o">=</span> <span class="n">Encoder</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">num_patches</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">num_patches</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">embed_dim</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">input_pos_emb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">pos_emb</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">input_class_emb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">class_emb</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">transformer_block</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">            <span class="n">TransformerBlock</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="n">embed_dim</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                <span class="n">num_heads</span><span class="o">=</span><span class="n">num_heads</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                <span class="n">mlp_dims</span><span class="o">=</span><span class="n">mlp_dims</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                <span class="n">dropout_rate</span><span class="o">=</span><span class="n">dropout_rate</span>
+</span></span><span class="line"><span class="cl">            <span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">num_layers</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">])</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">input_dim</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_norm</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">patch_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">patches</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">patch_x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">patch_x</span><span class="p">,</span> <span class="p">(</span><span class="n">input_dim</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_patches</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">encoded_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="p">(</span><span class="n">patch_x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">transformer_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transformer_block</span><span class="p">(</span><span class="n">encoded_x</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="n">training</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">cls</span> <span class="o">=</span> <span class="n">transformer_x</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">:]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">cls</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Encoder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Layer</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">num_patches</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">embed_dim</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">input_pos_emb</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">input_class_emb</span>  
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">super</span><span class="p">(</span><span class="n">Encoder</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">num_patches</span> <span class="o">=</span> <span class="n">num_patches</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span> <span class="o">=</span> <span class="n">embed_dim</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">pos_emb</span> <span class="o">=</span> <span class="n">input_pos_emb</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">class_emb</span> <span class="o">=</span> <span class="n">input_class_emb</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">batch_size</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">x</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pos_emb</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">broadcast_to</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">pos_emb</span><span class="p">,</span> <span class="p">[</span><span class="n">batch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_patches</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">class_emb</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">broadcast_to</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">class_emb</span><span class="p">,</span> <span class="p">[</span><span class="n">batch_size</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">encoded</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">class_emb</span><span class="p">,</span> <span class="n">x</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">encoded</span> <span class="o">=</span> <span class="n">encoded</span> <span class="o">+</span> <span class="n">pos_emb</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">encoded</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">TransformerBlock</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Layer</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="bp">self</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">embed_dim</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">num_heads</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">mlp_dims</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">dropout_rate</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">super</span><span class="p">(</span><span class="n">TransformerBlock</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">norm0</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">LayerNormalization</span><span class="p">(</span><span class="n">epsilon</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">mha0</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">MultiHeadAttention</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">num_heads</span><span class="o">=</span><span class="n">num_heads</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">key_dim</span><span class="o">=</span><span class="n">embed_dim</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">dropout</span><span class="o">=</span><span class="n">dropout_rate</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">layers</span> <span class="o">=</span> <span class="p">[[</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">dropout_rate</span><span class="p">)]</span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">mlp_dims</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">mlp</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">sublayer</span> <span class="ow">in</span> <span class="n">layers</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">sublayer</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">norm1</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">LayerNormalization</span><span class="p">(</span><span class="n">epsilon</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">training</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">inputs_norm</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">norm0</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">attn_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mha0</span><span class="p">(</span><span class="n">inputs_norm</span><span class="p">,</span> <span class="n">inputs_norm</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="n">training</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">out0</span> <span class="o">=</span> <span class="n">attn_output</span> <span class="o">+</span> <span class="n">inputs</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">norm1</span><span class="p">(</span><span class="n">out0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mlp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">out0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">PatchProjection</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Layer</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="bp">self</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">embed_dim</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">patch_size</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">super</span><span class="p">(</span><span class="n">PatchProjection</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">patch_size</span> <span class="o">=</span> <span class="n">patch_size</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">projection</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="n">embed_dim</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">patches</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">extract_patches</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">images</span><span class="o">=</span><span class="n">inputs</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">sizes</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">patch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">patch_size</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="n">strides</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">patch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">patch_size</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="n">rates</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="n">padding</span><span class="o">=</span><span class="s2">&#34;VALID&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">projected_patches</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">projection</span><span class="p">(</span><span class="n">patches</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">projected_patches</span>
+</span></span></code></pre></div><h3 id="why-spectrograms">Why Spectrograms?</h3>
+<p>Accelerometer and Gyroscope data is typically analyzed in the native time-series format. This allows for supervised machine learning (ML) applications using algorithms, such as: 1D-CNN, RNNs, and LSTM. The Short Time Fourier Transform (STFT) can extract the time-frequency components of the time-series data and effectively provide an image representation of the sensor data.</p>
+<p>$$
+\textrm{STFT}[x[n]] (m, k)  = \sum_{n = -\infty}^{\infty} x[n] \cdot w[n - mR] \cdot e^{-j \frac{2 \pi}{N_{x}} k n}.
+$$</p>
+<div style="text-align: center;">
+  <img src="/blog/academic/deseptr/spec.jpg" alt="vit">
+  <figcaption>Figure 2. Spectrogram representation of accelerometer data.</figcaption>
+</div>
+<br>
+<p>This transformation provides the algorithm with spectral information and opens up an arsenal of extremely powerful CV methods (e.g. ResNet).</p>
+<p>We implement the spectrogram conversion as a custom TensorFlow layer:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">SpecGeneration</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Layer</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="bp">self</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">frame_length</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">frame_step</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="o">**</span><span class="n">kwargs</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">frame_length</span> <span class="o">=</span> <span class="n">frame_length</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">frame_step</span> <span class="o">=</span> <span class="n">frame_step</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">perm</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">tf</span><span class="o">.</span><span class="n">signal</span><span class="o">.</span><span class="n">stft</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="n">x</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">frame_length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">frame_length</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">frame_step</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">frame_step</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">fft_length</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">frame_length</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">pad_end</span><span class="o">=</span><span class="kc">True</span>
+</span></span><span class="line"><span class="cl">            <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">tf</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">perm</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+</span></span></code></pre></div><p>We implement the custom augmentation protocol in Python:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">SpecAugmentation</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Layer</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&#39;&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">    class that implements the random augmentation prior to training
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#39;&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_sensors</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">num_sensors</span> <span class="o">=</span> <span class="n">num_sensors</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">gaussian</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">GaussianNoise</span><span class="p">(</span><span class="n">stddev</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">channels</span> <span class="o">=</span> <span class="n">inputs</span><span class="o">.</span><span class="n">shape</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">training</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gaussian</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">shift_spec</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_warp</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">warp_param</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq_warp</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">warp_param</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cut_mix</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">              <span class="n">x</span><span class="p">,</span> <span class="n">time_mask_num</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">time_mask_param</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">freq_mask_num</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">freq_mask_param</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">mix_param</span><span class="o">=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">inputs</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">cut_mix</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">spec</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">time_mask_num</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">time_mask_param</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">freq_mask_num</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">freq_mask_param</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">mix_param</span><span class="o">=</span><span class="mf">0.5</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">spec_size</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">v</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">spec_size</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">spec_size</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">time_mask_param</span> <span class="o">&gt;</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">4</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">time_mask_param</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">freq_mask_param</span> <span class="o">&gt;</span> <span class="n">v</span> <span class="o">/</span> <span class="mi">4</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">freq_mask_param</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">v</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># shuffled for the cut mix</span>
+</span></span><span class="line"><span class="cl">        <span class="n">shuffle_spec</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">time_mask_num</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">t</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">([],</span> <span class="n">minval</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">maxval</span><span class="o">=</span><span class="n">time_mask_param</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">n</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">t0</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">([],</span> <span class="n">minval</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">maxval</span><span class="o">=</span><span class="n">n</span><span class="o">-</span><span class="n">t</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">cut_mask</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span>
+</span></span><span class="line"><span class="cl">                <span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="n">t0</span><span class="o">-</span><span class="n">t</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">tf</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">spec_mask</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span>
+</span></span><span class="line"><span class="cl">                <span class="n">tf</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="n">t0</span><span class="o">-</span><span class="n">t</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">tf</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># add the cut spec together</span>
+</span></span><span class="line"><span class="cl">            <span class="n">spec</span> <span class="o">=</span> <span class="p">(</span><span class="n">mix_param</span> <span class="o">*</span> <span class="n">tf</span><span class="o">.</span><span class="n">math</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">cut_mask</span><span class="p">,</span> <span class="n">shuffle_spec</span><span class="p">))</span> <span class="o">+</span> <span class="n">tf</span><span class="o">.</span><span class="n">math</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">spec_mask</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">freq_mask_num</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">f</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">([],</span> <span class="n">minval</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">maxval</span><span class="o">=</span><span class="n">freq_mask_param</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">v</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">f0</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">([],</span> <span class="n">minval</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">maxval</span><span class="o">=</span><span class="n">v</span><span class="o">-</span><span class="n">f</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">cut_mask</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span>
+</span></span><span class="line"><span class="cl">                <span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">v</span><span class="o">-</span><span class="n">f0</span><span class="o">-</span><span class="n">f</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">tf</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">f0</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">spec_mask</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span>
+</span></span><span class="line"><span class="cl">                <span class="n">tf</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">v</span><span class="o">-</span> <span class="n">f0</span> <span class="o">-</span> <span class="n">f</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">tf</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">f0</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># add the cut spec together</span>
+</span></span><span class="line"><span class="cl">            <span class="n">spec</span> <span class="o">=</span> <span class="p">(</span><span class="n">mix_param</span> <span class="o">*</span> <span class="n">tf</span><span class="o">.</span><span class="n">math</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">cut_mask</span><span class="p">,</span> <span class="n">shuffle_spec</span><span class="p">))</span> <span class="o">+</span> <span class="n">tf</span><span class="o">.</span><span class="n">math</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">spec_mask</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">spec</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">shift_spec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spec</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">tf</span><span class="o">.</span><span class="n">roll</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">spec</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">//</span> <span class="mi">2</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">time_warp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spec</span><span class="p">,</span> <span class="n">warp_param</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">v</span><span class="p">,</span> <span class="n">tau</span> <span class="o">=</span> <span class="n">spec</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">spec</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># horizontal line through spectrogram centre</span>
+</span></span><span class="line"><span class="cl">        <span class="n">horiz_line</span> <span class="o">=</span> <span class="n">spec</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">v</span> <span class="o">//</span> <span class="mi">2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">random_point</span> <span class="o">=</span> <span class="n">horiz_line</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">tau</span> <span class="o">/</span> <span class="mi">4</span><span class="p">),</span> <span class="n">stop</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">tau</span> <span class="o">-</span> <span class="p">(</span><span class="n">tau</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)))]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">w</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">[],</span> <span class="n">minval</span><span class="o">=-</span><span class="n">warp_param</span> <span class="o">*</span> <span class="n">tau</span><span class="p">,</span> <span class="n">maxval</span><span class="o">=</span><span class="n">warp_param</span> <span class="o">*</span> <span class="n">tau</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">src_points</span> <span class="o">=</span> <span class="p">[[[</span><span class="n">v</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">random_point</span><span class="p">[</span><span class="mi">0</span><span class="p">]]]]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">dst_points</span> <span class="o">=</span> <span class="p">[[[</span><span class="n">v</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">random_point</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">w</span><span class="p">]]]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">warped_spec</span> <span class="o">=</span> <span class="n">sparse_image_warp</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">src_points</span><span class="p">,</span> <span class="n">dst_points</span><span class="p">,</span> <span class="n">num_boundary_points</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">warped_spec</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">freq_warp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spec</span><span class="p">,</span> <span class="n">warp_param</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">spec</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">perm</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">v</span><span class="p">,</span> <span class="n">tau</span> <span class="o">=</span> <span class="n">spec</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">spec</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># horizontal line through spectrogram centre</span>
+</span></span><span class="line"><span class="cl">        <span class="n">horiz_line</span> <span class="o">=</span> <span class="n">spec</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">v</span> <span class="o">//</span> <span class="mi">2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">random_point</span> <span class="o">=</span> <span class="n">horiz_line</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">tau</span> <span class="o">/</span> <span class="mi">4</span><span class="p">),</span> <span class="n">stop</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">tau</span> <span class="o">-</span> <span class="p">(</span><span class="n">tau</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)))]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">w</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">[],</span> <span class="n">minval</span><span class="o">=-</span><span class="n">warp_param</span><span class="p">,</span> <span class="n">maxval</span><span class="o">=</span><span class="n">warp_param</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">src_points</span> <span class="o">=</span> <span class="p">[[[</span><span class="n">v</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">random_point</span><span class="p">[</span><span class="mi">0</span><span class="p">]]]]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">dst_points</span> <span class="o">=</span> <span class="p">[[[</span><span class="n">v</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">random_point</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">w</span><span class="p">]]]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">warped_spec</span> <span class="o">=</span> <span class="n">sparse_image_warp</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="n">src_points</span><span class="p">,</span> <span class="n">dst_points</span><span class="p">,</span> <span class="n">num_boundary_points</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">tf</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">warped_spec</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">perm</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</span></span></code></pre></div><h3 id="separable-transformer">Separable Transformer</h3>
+<p>The Separable Transformer (SepTr) [1] was developed for analyzing audio spectrograms with ViTs. The architecture includes two sequential transformer blocks that process sub-samples of the spectrograms&rsquo; extracted patches, grouped by the time-interval and frequency-band for the first and second transformer blocks, respectively. When grouped together, the positional embedding and class embedding is repeated for each sub-sample, with the class token being initialized prior to the forward-pass through the vertical transformer, and the mean value computated at the output of the vertical transformer. The key contribution here is that SepTr leverages the time-dependent nature of spectrograms within the ViT framework.</p>
+<div style="text-align: center;">
+  <img src="/blog/academic/deseptr/septr.png" alt="vit">
+  <figcaption>Figure 3. Diagram of the SepTr [1]</figcaption>
+</div>
+<p>We implement SepTr with the following Python code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">SepTr</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Layer</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="bp">self</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">input_dim</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">patch_size</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">embed_dim</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">num_layers</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">num_heads</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">mlp_dims</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">dropout_rate</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="o">**</span><span class="n">kwargs</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">super</span><span class="p">(</span><span class="n">SepTr</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">class_emb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_weight</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;class_emb&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">initializer</span><span class="o">=</span><span class="s1">&#39;uniform&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">trainable</span><span class="o">=</span><span class="kc">True</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">time_pos_emb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_weight</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;time_position_emb&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">input_dim</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">initializer</span><span class="o">=</span><span class="s1">&#39;uniform&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">trainable</span><span class="o">=</span><span class="kc">True</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">freq_pos_emb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_weight</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;freq_position_emb&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">input_dim</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">initializer</span><span class="o">=</span><span class="s1">&#39;uniform&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">trainable</span><span class="o">=</span><span class="kc">True</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">time_encoder</span> <span class="o">=</span> <span class="n">TimeEncoder</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">spec_dim</span><span class="o">=</span><span class="n">input_dim</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">embed_dim</span><span class="o">=</span><span class="n">embed_dim</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">input_pos_emb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">time_pos_emb</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">input_class_emb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">class_emb</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">freq_encoder</span> <span class="o">=</span> <span class="n">FreqEncoder</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">spec_dim</span><span class="o">=</span><span class="n">input_dim</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">embed_dim</span><span class="o">=</span><span class="n">embed_dim</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">input_pos_emb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">freq_pos_emb</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">input_class_emb</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">class_emb</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">patch_projection</span> <span class="o">=</span> <span class="n">PatchProjection</span><span class="p">(</span><span class="n">embed_dim</span><span class="o">=</span><span class="n">embed_dim</span><span class="p">,</span> <span class="n">patch_size</span><span class="o">=</span><span class="n">patch_size</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">time_transformer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                <span class="n">TransformerBlock</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">embed_dim</span><span class="o">=</span><span class="n">embed_dim</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">num_heads</span><span class="o">=</span><span class="n">num_heads</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">mlp_dims</span><span class="o">=</span><span class="n">mlp_dims</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">dropout_rate</span><span class="o">=</span><span class="n">dropout_rate</span>
+</span></span><span class="line"><span class="cl">                <span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_layers</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="n">name</span><span class="o">=</span><span class="s2">&#34;time_transformer&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">freq_transformer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                <span class="n">TransformerBlock</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">embed_dim</span><span class="o">=</span><span class="n">embed_dim</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">num_heads</span><span class="o">=</span><span class="n">num_heads</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">mlp_dims</span><span class="o">=</span><span class="n">mlp_dims</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">dropout_rate</span><span class="o">=</span><span class="n">dropout_rate</span>
+</span></span><span class="line"><span class="cl">                <span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_layers</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">],</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">name</span><span class="o">=</span><span class="s2">&#34;freq_transformer&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">pool0</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">GlobalAveragePooling1D</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">pool1</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">GlobalAveragePooling1D</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">patch_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">patch_projection</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># encode the patches in time batches and rearrange input</span>
+</span></span><span class="line"><span class="cl">        <span class="n">time_encoded_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_encoder</span><span class="p">(</span><span class="n">patch_x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">time_encoded_x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">time_encoded_x</span><span class="p">,</span> <span class="n">perm</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># pass the input through the transformer and decouple from the position embedding</span>
+</span></span><span class="line"><span class="cl">        <span class="n">time_transformer_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_transformer</span><span class="p">(</span><span class="n">time_encoded_x</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="n">training</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">time_transformer_x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">time_transformer_x</span><span class="p">,</span> <span class="n">perm</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># get the mean cls token</span>
+</span></span><span class="line"><span class="cl">        <span class="n">time_mean_cls</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool0</span><span class="p">(</span><span class="n">time_transformer_x</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># get the output vector</span>
+</span></span><span class="line"><span class="cl">        <span class="n">output_x</span> <span class="o">=</span> <span class="n">time_transformer_x</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:,</span> <span class="p">:,</span> <span class="p">:]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># rearrange the axis</span>
+</span></span><span class="line"><span class="cl">        <span class="n">output_x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">output_x</span><span class="p">,</span> <span class="n">perm</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># encode the frequencies as batches </span>
+</span></span><span class="line"><span class="cl">        <span class="n">freq_encoded_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq_encoder</span><span class="p">(</span><span class="n">output_x</span><span class="p">,</span> <span class="n">time_mean_cls</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># pass the encoded frequency input to the transformer</span>
+</span></span><span class="line"><span class="cl">        <span class="n">freq_transformer_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq_transformer</span><span class="p">(</span><span class="n">freq_encoded_x</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="n">training</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># get the mean cls token</span>
+</span></span><span class="line"><span class="cl">        <span class="n">freq_mean_cls</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool1</span><span class="p">(</span><span class="n">freq_transformer_x</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">:])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">freq_mean_cls</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">TransformerBlock</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Layer</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">,</span> <span class="n">num_heads</span><span class="p">,</span> <span class="n">mlp_dims</span><span class="p">,</span> <span class="n">dropout_rate</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">super</span><span class="p">(</span><span class="n">TransformerBlock</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">norm0</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">LayerNormalization</span><span class="p">(</span><span class="n">epsilon</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">mha0</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">MultiHeadAttention</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">num_heads</span><span class="o">=</span><span class="n">num_heads</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">key_dim</span><span class="o">=</span><span class="n">embed_dim</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">attention_axes</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">dropout</span><span class="o">=</span><span class="n">dropout_rate</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">kernel_initializer</span><span class="o">=</span><span class="s1">&#39;he_normal&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">kernel_regularizer</span><span class="o">=</span><span class="n">regularizer</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">bias_regularizer</span><span class="o">=</span><span class="n">regularizer</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">layers</span> <span class="o">=</span> <span class="p">[[</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">dropout_rate</span><span class="p">)]</span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">mlp_dims</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">mlp</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">sublayer</span> <span class="ow">in</span> <span class="n">layers</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">sublayer</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">norm1</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">LayerNormalization</span><span class="p">(</span><span class="n">epsilon</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">inputs_norm</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">norm0</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">attn_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mha0</span><span class="p">(</span><span class="n">inputs_norm</span><span class="p">,</span> <span class="n">inputs_norm</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="n">training</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">out0</span> <span class="o">=</span> <span class="n">attn_output</span> <span class="o">+</span> <span class="n">inputs</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">norm1</span><span class="p">(</span><span class="n">out0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mlp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">out0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">TimeEncoder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Layer</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">spec_dim</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">embed_dim</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">input_pos_emb</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">input_class_emb</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">super</span><span class="p">(</span><span class="n">TimeEncoder</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">time_dim</span> <span class="o">=</span> <span class="n">spec_dim</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">freq_dim</span> <span class="o">=</span> <span class="n">spec_dim</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span> <span class="o">=</span> <span class="n">embed_dim</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">input_class_emb</span> <span class="o">=</span> <span class="n">input_class_emb</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">pos_emb</span> <span class="o">=</span> <span class="n">input_pos_emb</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">optional_class_emb</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">batch_size</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">x</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># use the class emb if provided</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">optional_class_emb</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">class_emb</span> <span class="o">=</span> <span class="n">optional_class_emb</span>
+</span></span><span class="line"><span class="cl">            <span class="n">class_emb</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">class_emb</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">),</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">pos_emb</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">broadcast_to</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">pos_emb</span><span class="p">,</span> <span class="p">[</span><span class="n">batch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq_dim</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_dim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">class_emb</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">broadcast_to</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">input_class_emb</span><span class="p">,</span> <span class="p">[</span><span class="n">batch_size</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_dim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">encoded</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">class_emb</span><span class="p">,</span> <span class="n">x</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">encoded</span> <span class="o">=</span> <span class="n">encoded</span> <span class="o">+</span> <span class="n">pos_emb</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">encoded</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">FreqEncoder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Layer</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">spec_dim</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">embed_dim</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">input_pos_emb</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">input_class_emb</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">super</span><span class="p">(</span><span class="n">FreqEncoder</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">time_dim</span> <span class="o">=</span> <span class="n">spec_dim</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">freq_dim</span> <span class="o">=</span> <span class="n">spec_dim</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span> <span class="o">=</span> <span class="n">embed_dim</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">class_emb</span> <span class="o">=</span> <span class="n">input_class_emb</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">pos_emb</span> <span class="o">=</span> <span class="n">input_pos_emb</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">optional_class_emb</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">batch_size</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">x</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># use the class emb if provided</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">optional_class_emb</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">class_emb</span> <span class="o">=</span> <span class="n">optional_class_emb</span>
+</span></span><span class="line"><span class="cl">            <span class="n">class_emb</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">class_emb</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">class_emb</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">broadcast_to</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">class_emb</span><span class="p">,</span> <span class="p">[</span><span class="n">batch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq_dim</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">distillation_token</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">broadcast_to</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">class_emb</span><span class="p">,</span> <span class="p">[</span><span class="n">batch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq_dim</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">pos_emb</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">broadcast_to</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">pos_emb</span><span class="p">,</span> <span class="p">[</span><span class="n">batch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">freq_dim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_dim</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_dim</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">encoded</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">class_emb</span><span class="p">,</span> <span class="n">x</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">encoded</span> <span class="o">=</span> <span class="n">encoded</span> <span class="o">+</span> <span class="n">pos_emb</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">encoded</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">PatchProjection</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Layer</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">,</span> <span class="n">patch_size</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">super</span><span class="p">(</span><span class="n">PatchProjection</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">patch_size</span> <span class="o">=</span> <span class="n">patch_size</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">projection</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="n">embed_dim</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">patches</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">extract_patches</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">images</span><span class="o">=</span><span class="n">inputs</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">sizes</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">patch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">patch_size</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="n">strides</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">patch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">patch_size</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="n">rates</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="n">padding</span><span class="o">=</span><span class="s2">&#34;VALID&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">projected_patches</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">projection</span><span class="p">(</span><span class="n">patches</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">projected_patches</span>
+</span></span></code></pre></div><hr>
+<h2 id="data-efficient-separable-transformer">Data Efficient Separable Transformer</h2>
+<h3 id="theory">Theory</h3>
+<p>We proposed the Data Efficient Separable Transformer (DeSepTr) as a modification of SepTr that incorporates the knowledge distillation (KD) protocol from the <a href="https://arxiv.org/abs/2012.12877">Data Efficient Image Transformer (DeiT)</a> [4] and utilizes the convolutional &rsquo;teacher&rsquo; network to provide the embedded representation of data to the &lsquo;student&rsquo; transformer.</p>
+<div style="text-align: center;">
+  <img src="/blog/academic/deseptr/deit.jpg" alt="deit" style="width: 70%; max-width: 600px;">
+  <figcaption>Figure 3. Diagram of DeiT [4]</figcaption>
+</div>
+<br>
+<p>A key detail of DeiT is the inclusion of the distillation token alongside the class token. The predictions from the convolutional &rsquo;teacher&rsquo; model, $y_{t}$ interact with the distillation token following processing with the transformer, $y_{dist}$, to transfer knowledge.</p>
+<p>$$
+L_{s} = \frac{1}{2} L_{CE} (y, y_{cls}) + \frac{1}{2} L_{CE} (y_{dist}, y_{t})
+$$</p>
+<h3 id="solution">Solution</h3>
+<p>We adapt SepTr following the data efficient image transformer (DeiT) framework, adopting <a href="https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf">ResNet-18</a> [5] as the &rsquo;teacher&rsquo; model and utilizing the initial layers as the projection layer for the &lsquo;student&rsquo; transformer.</p>
+<p>The code for the convolutional &rsquo;teacher&rsquo;:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">create_resnet_teacher</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">window_length</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">num_sensors</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">frame_length</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">frame_step</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">num_classes</span>
+</span></span><span class="line"><span class="cl"><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># define the input to the model</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">input</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">window_length</span><span class="p">,</span> <span class="n">num_sensors</span> <span class="o">*</span> <span class="mi">3</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># generate the spectrogram</span>
+</span></span><span class="line"><span class="cl">  <span class="n">spec_x</span> <span class="o">=</span> <span class="n">SpecGeneration</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">frame_length</span><span class="p">,</span> <span class="n">frame_step</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)(</span><span class="nb">input</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># augment the sensor data</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">SpecAugmentation</span><span class="p">(</span><span class="n">num_sensors</span><span class="o">=</span><span class="n">num_wearables</span> <span class="o">*</span> <span class="n">num_sensors</span><span class="p">)(</span><span class="n">spec_x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">filters</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">kernel_size</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">strides</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">kernel_initializer</span><span class="o">=</span><span class="s1">&#39;he_normal&#39;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">      <span class="n">padding</span><span class="o">=</span><span class="s2">&#34;same&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">kernel_regularizer</span><span class="o">=</span><span class="n">regularizer</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">bias_regularizer</span><span class="o">=</span><span class="n">regularizer</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">rate</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">BatchNormalization</span><span class="p">()(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">ReLU</span><span class="p">()(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">MaxPool2D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">strides</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s2">&#34;same&#34;</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">ResNetBlock</span><span class="p">(</span><span class="n">channels</span><span class="o">=</span><span class="mi">64</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">encoded</span> <span class="o">=</span> <span class="n">ResNetBlock</span><span class="p">(</span><span class="n">channels</span><span class="o">=</span><span class="mi">64</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">ResNetBlock</span><span class="p">(</span><span class="n">channels</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">down_sample</span><span class="o">=</span><span class="kc">True</span><span class="p">)(</span><span class="n">encoded</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">ResNetBlock</span><span class="p">(</span><span class="n">channels</span><span class="o">=</span><span class="mi">128</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">ResNetBlock</span><span class="p">(</span><span class="n">channels</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">down_sample</span><span class="o">=</span><span class="kc">True</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">ResNetBlock</span><span class="p">(</span><span class="n">channels</span><span class="o">=</span><span class="mi">256</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">ResNetBlock</span><span class="p">(</span><span class="n">channels</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">down_sample</span><span class="o">=</span><span class="kc">True</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">ResNetBlock</span><span class="p">(</span><span class="n">channels</span><span class="o">=</span><span class="mi">512</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Flatten</span><span class="p">()(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">output</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">num_classes</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="nb">input</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="p">[</span><span class="n">output</span><span class="p">,</span> <span class="n">encoded</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">model</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">ResNetBlock</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Layer</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channels</span><span class="p">,</span> <span class="n">down_sample</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">super</span><span class="p">(</span><span class="n">ResNetBlock</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="bp">self</span><span class="o">.</span><span class="n">__down_sample</span> <span class="o">=</span> <span class="n">down_sample</span>
+</span></span><span class="line"><span class="cl">      <span class="bp">self</span><span class="o">.</span><span class="n">__strides</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">down_sample</span> <span class="k">else</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="bp">self</span><span class="o">.</span><span class="n">conv0</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="n">filters</span><span class="o">=</span><span class="n">channels</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="n">kernel_size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">          <span class="n">strides</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__strides</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">          <span class="n">padding</span><span class="o">=</span><span class="s2">&#34;same&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="n">kernel_initializer</span><span class="o">=</span><span class="s1">&#39;he_normal&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="n">kernel_regularizer</span><span class="o">=</span><span class="n">regularizer</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="n">bias_regularizer</span><span class="o">=</span><span class="n">regularizer</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="bp">self</span><span class="o">.</span><span class="n">d0</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">rate</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="bp">self</span><span class="o">.</span><span class="n">bn0</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">BatchNormalization</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">          
+</span></span><span class="line"><span class="cl">      <span class="bp">self</span><span class="o">.</span><span class="n">conv1</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="n">filters</span><span class="o">=</span><span class="n">channels</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="n">kernel_size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">          <span class="n">strides</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">__strides</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">          <span class="n">padding</span><span class="o">=</span><span class="s2">&#34;same&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="n">kernel_initializer</span><span class="o">=</span><span class="s1">&#39;he_normal&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="n">kernel_regularizer</span><span class="o">=</span><span class="n">regularizer</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="n">bias_regularizer</span><span class="o">=</span><span class="n">regularizer</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="bp">self</span><span class="o">.</span><span class="n">d1</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">rate</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="bp">self</span><span class="o">.</span><span class="n">bn1</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">BatchNormalization</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">merge</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Add</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__down_sample</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">res_conv</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">filters</span><span class="o">=</span><span class="n">channels</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">strides</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">kernel_size</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">kernel_initializer</span><span class="o">=</span><span class="s2">&#34;he_normal&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">padding</span><span class="o">=</span><span class="s2">&#34;same&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">kernel_regularizer</span><span class="o">=</span><span class="n">regularizer</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">bias_regularizer</span><span class="o">=</span><span class="n">regularizer</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">res_d</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">rate</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">res_bn</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">BatchNormalization</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="n">inputs</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv0</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d0</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">training</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bn0</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">training</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">d1</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">training</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bn1</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">training</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__down_sample</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">res_conv</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">res_d</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">training</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">res_bn</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">training</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">merge</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">res</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">out</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">out</span>
+</span></span></code></pre></div><p>The code for the &lsquo;student&rsquo; transformer:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">create_septr_encoded_student</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">input_dim</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">patch_size</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">embed_dim</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">num_layers</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">num_heads</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">mlp_dims</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">dropout_rate</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">num_classes</span>
+</span></span><span class="line"><span class="cl"><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">input</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">input_dim</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">mean_cls</span><span class="p">,</span> <span class="n">mean_dist</span> <span class="o">=</span> <span class="n">SepTr</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">input_dim</span><span class="p">,</span> <span class="n">patch_size</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">,</span> <span class="n">num_layers</span><span class="p">,</span> <span class="n">num_heads</span><span class="p">,</span> <span class="n">mlp_dims</span><span class="p">,</span> <span class="n">dropout_rate</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)(</span><span class="nb">input</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">ce_output</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">num_classes</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;cls_output&#34;</span><span class="p">)(</span><span class="n">mean_cls</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">t_output</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">num_classes</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;distillation_output&#34;</span><span class="p">)(</span><span class="n">mean_dist</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="nb">input</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="p">[</span><span class="n">ce_output</span><span class="p">,</span> <span class="n">t_output</span><span class="p">])</span>
+</span></span></code></pre></div><p>We can visualize the training procedure of DeSepTr in Figure 4.</p>
+<div style="text-align: center;">
+  <img src="/blog/academic/deseptr/deseptr.pdf" alt="deseptr">
+  <figcaption>Figure 4. Diagram of DeSepTr</figcaption>
+</div>
+<br>
+<p>The code for the training procedure:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">CustomDeiT</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">student</span><span class="p">,</span> <span class="n">teacher</span><span class="p">,</span> <span class="n">encoder</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">super</span><span class="p">(</span><span class="n">CustomDeiT</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">teacher</span> <span class="o">=</span> <span class="n">teacher</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">student</span> <span class="o">=</span> <span class="n">student</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span> <span class="o">=</span> <span class="n">encoder</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">compile</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">optimizer</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">metrics</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">student_loss_fn</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">distillation_loss_fn</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="n">metrics</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">student_loss_fn</span> <span class="o">=</span> <span class="n">student_loss_fn</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">distillation_loss_fn</span> <span class="o">=</span> <span class="n">distillation_loss_fn</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">train_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># unpack the data</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sample_weight</span> <span class="o">=</span> <span class="n">data</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># get the predictions from the teacher model </span>
+</span></span><span class="line"><span class="cl">        <span class="n">teacher_predictions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">teacher</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">encoded_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">GradientTape</span><span class="p">()</span> <span class="k">as</span> <span class="n">tape</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># get the class and distillation tokens from the student model </span>
+</span></span><span class="line"><span class="cl">            <span class="n">student_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">student</span><span class="p">(</span><span class="n">encoded_x</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># get the predicitions from the student loss function</span>
+</span></span><span class="line"><span class="cl">            <span class="n">student_loss</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">student_loss_fn</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">student_output</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sample_weight</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># get the distillation loss from the teacher predictions </span>
+</span></span><span class="line"><span class="cl">            <span class="n">distillation_loss</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">distillation_loss_fn</span><span class="p">(</span><span class="n">teacher_predictions</span><span class="p">,</span> <span class="n">student_output</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">sample_weight</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1"># compute the overall loss </span>
+</span></span><span class="line"><span class="cl">            <span class="n">loss</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">student_loss</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">distillation_loss</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># compute the gradients</span>
+</span></span><span class="line"><span class="cl">        <span class="n">trainable_vars</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">student</span><span class="o">.</span><span class="n">trainable_variables</span>
+</span></span><span class="line"><span class="cl">        <span class="n">gradients</span> <span class="o">=</span> <span class="n">tape</span><span class="o">.</span><span class="n">gradient</span><span class="p">(</span><span class="n">loss</span><span class="p">,</span> <span class="n">trainable_vars</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># update the weights</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">optimizer</span><span class="o">.</span><span class="n">apply_gradients</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">gradients</span><span class="p">,</span> <span class="n">trainable_vars</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">compiled_metrics</span><span class="o">.</span><span class="n">update_state</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">student_output</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">results</span> <span class="o">=</span> <span class="p">{</span><span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">m</span><span class="o">.</span><span class="n">result</span><span class="p">()</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">metrics</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">results</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;student_loss&#34;</span><span class="p">:</span> <span class="n">student_loss</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;distillation_loss&#34;</span><span class="p">:</span> <span class="n">distillation_loss</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;loss&#34;</span><span class="p">:</span> <span class="n">loss</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">results</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">test_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">data</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">encoded_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">teacher_predictions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">teacher</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">y_prediction</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">student</span><span class="p">(</span><span class="n">encoded_x</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">student_loss</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">student_loss_fn</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_prediction</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">distillation_loss</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">distillation_loss_fn</span><span class="p">(</span><span class="n">teacher_predictions</span><span class="p">,</span> <span class="n">y_prediction</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">loss</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">student_loss</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">distillation_loss</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">compiled_metrics</span><span class="o">.</span><span class="n">update_state</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_prediction</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">results</span> <span class="o">=</span> <span class="p">{</span><span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">m</span><span class="o">.</span><span class="n">result</span><span class="p">()</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">metrics</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">results</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;student_loss&#34;</span><span class="p">:</span> <span class="n">student_loss</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;distillation_loss&#34;</span><span class="p">:</span> <span class="n">distillation_loss</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;loss&#34;</span><span class="p">:</span> <span class="n">loss</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">results</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">custom_predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">encoded_X</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">y_prediction</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">student</span><span class="p">(</span><span class="n">encoded_X</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">y_prediction</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span></code></pre></div><p>Example for using the training procedure:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">teacher_callback</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">EarlyStopping</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">monitor</span><span class="o">=</span><span class="s1">&#39;val_loss&#39;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">patience</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;min&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">restore_best_weights</span><span class="o">=</span><span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">student_callback</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">EarlyStopping</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">monitor</span><span class="o">=</span><span class="s1">&#39;val_loss&#39;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">patience</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;min&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">restore_best_weights</span><span class="o">=</span><span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># get the class weights</span>
+</span></span><span class="line"><span class="cl"><span class="n">sample_weights</span> <span class="o">=</span> <span class="n">class_weight</span><span class="o">.</span><span class="n">compute_class_weight</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">class_weight</span><span class="o">=</span><span class="s1">&#39;balanced&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">classes</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">num_classes</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">y</span><span class="o">=</span><span class="n">train</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">weight_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">weight</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sample_weights</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">weight_dict</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">weight</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">teacher</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">optimizer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">experimental</span><span class="o">.</span><span class="n">AdamW</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="n">params</span><span class="p">[</span><span class="s2">&#34;training&#34;</span><span class="p">][</span><span class="s2">&#34;teacher&#34;</span><span class="p">][</span><span class="s2">&#34;lr&#34;</span><span class="p">]),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">loss</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">losses</span><span class="o">.</span><span class="n">CategoricalCrossentropy</span><span class="p">(</span><span class="n">label_smoothing</span><span class="o">=</span><span class="mf">0.1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">CategoricalAccuracy</span><span class="p">()]</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">teacher</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">X_train</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">Y_train</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span>
+</span></span><span class="line"><span class="cl">    <span class="n">epochs</span><span class="o">=</span><span class="n">epochs</span><span class="p">,,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">X_val</span><span class="p">,</span> <span class="n">Y_val</span><span class="p">),</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">teacher_callback</span><span class="p">,</span> <span class="n">TeacherLoggingCallback</span><span class="p">()],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">class_weight</span><span class="o">=</span><span class="n">weight_dict</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">teacher_val_output</span> <span class="o">=</span> <span class="n">teacher</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">X_val</span><span class="p">,</span> <span class="n">Y_val</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">teacher_test_output</span> <span class="o">=</span> <span class="n">teacher</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">distiller</span> <span class="o">=</span> <span class="n">CustomDeiT</span><span class="p">(</span><span class="n">student</span><span class="p">,</span> <span class="n">teacher</span><span class="p">,</span> <span class="n">encoder</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">distiller</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">optimizer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">experimental</span><span class="o">.</span><span class="n">AdamW</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">CategoricalAccuracy</span><span class="p">()],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">student_loss_fn</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">losses</span><span class="o">.</span><span class="n">CategoricalCrossentropy</span><span class="p">(</span><span class="n">label_smoothing</span><span class="o">=</span><span class="mf">0.1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">distillation_loss_fn</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">losses</span><span class="o">.</span><span class="n">CategoricalCrossentropy</span><span class="p">(</span><span class="n">label_smoothing</span><span class="o">=</span><span class="mf">0.1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">student_history</span> <span class="o">=</span> <span class="n">distiller</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">X_train</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">Y_train</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">epochs</span><span class="o">=</span><span class="n">epochs</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">X_val</span><span class="p">,</span> <span class="n">Y_val</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">student_callback</span><span class="p">,</span> <span class="n">StudentLoggingCallback</span><span class="p">()],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">class_weight</span><span class="o">=</span><span class="n">weight_dict</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">deseptr_val_output</span> <span class="o">=</span> <span class="n">distiller</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">X_val</span><span class="p">,</span> <span class="n">Y_val</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">deseptr_test_output</span> <span class="o">=</span> <span class="n">distiller</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="experiments">Experiments</h3>
+<p>We evaluated our proposed framework on the following datasets:</p>
+<ol>
+<li><a href="https://www.nature.com/articles/s41597-020-0563-y">A database of human gait performance on irregular and uneven surfaces collected by wearable sensors</a></li>
+<li><a href="https://archive.ics.uci.edu/dataset/231/pamap2+physical+activity+monitoring">PAMAP2 Physical Activity Monitoring</a></li>
+<li><a href="https://archive.ics.uci.edu/dataset/245/daphnet+freezing+of+gait">Daphnet Freezing of Gait</a></li>
+</ol>
+<p>The results from the surface condition recognition where the data originated from the right-shank device are presented in Table 1 and Figure 5.</p>
+<div style="text-align: center;">
+  <img src="/blog/academic/deseptr/tab_surface.png" alt="tab_surface" style="width: 70%; max-width: 600px;">
+  <figcaption>Table 1. Results from the surface condition recognition dataset.</figcaption>
+</div>
+<br>
+<div style="text-align: center;">
+  <img src="/blog/academic/deseptr/conf_mat.png" alt="conf_mat" style="width: 70%; max-width: 600px;">
+  <figcaption>Figure 5. Confusion matrices for DeSepTr from the surface condition recognition dataset</figcaption>
+</div>
+<br>
+<p>The results from the PAMPA2 dataset where the data originated from the ankle device are presented in Table 2.</p>
+<div style="text-align: center;">
+  <img src="/blog/academic/deseptr/tab_activity.png" alt="tab_activity" style="width: 70%; max-width: 600px;">
+  <figcaption>Table 2. Results from the PAMPA2 dataset.</figcaption>
+</div>
+<br>
+<p>The results from the Daphnet dataset where the data originated from the shank device are presented in Table 3.</p>
+<div style="text-align: center;">
+  <img src="/blog/academic/deseptr/tab_fog.png" alt="tab_fog" style="width: 70%; max-width: 600px;">
+  <figcaption>Table 2. Results from the Daphnet dataset.</figcaption>
+</div>
+<br>
+<p>We can see that adopting the DeSepTr framework offers improvements on the original ViT and SepTr architectures for the different wearable sensor applications.</p>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>I hope this blog has provided you with the technical code to implement DeSepTr for your own spectrogram implementations. This was my first real deep learning (DL) publication and I had a lot of fun devising my own architecture for analyzing datasets relevant to my PhD. Ultimately, DeSepTr did not find its way into my PhD, however, I&rsquo;ve recently published my Data Efficient Sensor Transformer (DesT) and Federated Data Efficient Sensor Transformer (FeDesT) in the special session on <a href="https://www3.cs.stonybrook.edu/~ieeebigdata2024/SpecialSessions.html#SpecialSession8">Federated Learning for Big Data</a> at the <a href="https://www3.cs.stonybrook.edu/~ieeebigdata2024/index.html">2024 IEEE Big Data conference</a>. I will be writing a blog for DesT and FeDesT for my presentation to help keep the code free and transparent.</p>
+<p>I&rsquo;ve recently focused on revamping my professional website for my career. This has given me the push to publish the code for my PhD research. Revisiting this paper I have found a few things that needed corrected and have digged out the supporting code. If there&rsquo;s any errors please feel free to <a href="/contact">contact me</a> and I&rsquo;ll try and rectify any issues.</p>
+<p>If you have benefited from any of the content in this blog please drop me a reference wherever appropriate! I would also appreciate shoutouts on Twitter (X), Reddit (<a href="https://www.reddit.com/r/MachineLearning/">r/MachineLearning</a>), or LinkedIn.</p>
+<ol>
+<li>McQuire, J., Watson, P., Wright, N., Hiden, H. and Catt, M., 2023, July. A Data Efficient Vision Transformer for Robust Human Activity Recognition from the Spectrograms of Wearable Sensor Data. In 2023 IEEE Statistical Signal Processing Workshop (SSP) (pp. 364-368). IEEE.</li>
+</ol>
+<hr>
+<h2 id="references">References</h2>
+<ol>
+<li>Ristea, N.C., Ionescu, R.T. and Khan, F.S., 2022. Septr: Separable transformer for audio spectrogram processing. arXiv preprint arXiv:2203.09581.</li>
+<li>Dosovitskiy, A., 2020. An image is worth 16x16 words: Transformers for image recognition at scale. arXiv preprint arXiv:2010.11929.</li>
+<li>Vaswani, A., 2017. Attention is all you need. Advances in Neural Information Processing Systems.</li>
+<li>Touvron, H., Cord, M., Douze, M., Massa, F., Sablayrolles, A. and Jégou, H., 2021, July. Training data-efficient image transformers &amp; distillation through attention. In International conference on machine learning (pp. 10347-10357). PMLR.</li>
+<li>He, K., Zhang, X., Ren, S. and Sun, J., 2016. Deep residual learning for image recognition. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 770-778).</li>
+</ol>
+
+</div>
+
+        </div><div id="footer" class="mb-5">
+    <hr>
+    
+    <div class="container text-center">
+        
+            <a href="mailto:mail@example.com" class="fas fa-envelope fa-1x" title="E-mail"></a>
+        
+            <a href="https://scholar.google.com/" class="ai ai-google-scholar fa-1x" title="Scholar"></a>
+        
+    </div>
+    
+    
+        <div class="container text-center">
+            <a href="https://github.com/gohugoio/hugo" title="Made with Hugo" ><small>Made with Hugo</small></a>
+        </div>
+    
+</div>
+
+    </body>
+</html>
