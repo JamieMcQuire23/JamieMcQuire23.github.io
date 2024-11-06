@@ -2,7 +2,7 @@
 math: true
 ---
 
-# ViTs for Wearable Sensor Spectrogram Analysis
+# ViTs for Wearable Sensor Spectrogram Analysis with DeSepTr
 
 This is a blog that I have wrote in conjunction with my paper: [A Data Efficient Vision Transformer for Robust Human Activity Recognition from the Spectrograms of Wearable Sensor Data](https://ieeexplore.ieee.org/document/10208059/citations?tabFilter=papers#citations). If you would like access feel free to reach out! 
 
@@ -611,7 +611,7 @@ class PatchProjection(tf.keras.layers.Layer):
 We proposed the Data Efficient Separable Transformer (DeSepTr) as a modification of SepTr that incorporates the knowledge distillation (KD) protocol from the [Data Efficient Image Transformer (DeiT)](https://arxiv.org/abs/2012.12877) [4] and utilizes the convolutional 'teacher' network to provide the embedded representation of data to the 'student' transformer.
 
 <div style="text-align: center;">
-  <img src="/blog/academic/deseptr/deit.jpg" alt="vit" style="width: 70%; max-width: 600px;">
+  <img src="/blog/academic/deseptr/deit.jpg" alt="deit" style="width: 70%; max-width: 600px;">
   <figcaption>Figure 3. Diagram of DeiT [4]</figcaption>
 </div>
 <br>
@@ -630,20 +630,396 @@ The code for the convolutional 'teacher':
 
 ```python
 
+def create_resnet_teacher(
+  window_length, 
+  num_sensors, 
+  frame_length, 
+  frame_step,
+  num_classes
+):
 
+  # define the input to the model
+  input = tf.keras.Input(shape=(window_length, num_sensors * 3))
+
+  # generate the spectrogram
+  spec_x = SpecGeneration(
+      frame_length, frame_step
+  )(input)
+
+  # augment the sensor data
+  x = SpecAugmentation(num_sensors=num_wearables * num_sensors)(spec_x)
+
+  x = tf.keras.layers.Conv2D(
+      filters=64, 
+      kernel_size=(7,7), 
+      strides=2, 
+      kernel_initializer='he_normal', 
+      padding="same",
+      kernel_regularizer=regularizer,
+      bias_regularizer=regularizer
+  )(x)
+
+  x = tf.keras.layers.Dropout(rate=0.3)(x)
+  x = tf.keras.layers.BatchNormalization()(x)
+  x = tf.keras.layers.ReLU()(x)
+  x = tf.keras.layers.MaxPool2D(pool_size=(2,2), strides=2, padding="same")(x)
+
+  x = ResNetBlock(channels=64)(x)
+  encoded = ResNetBlock(channels=64)(x)
+
+  x = ResNetBlock(channels=128, down_sample=True)(encoded)
+  x = ResNetBlock(channels=128)(x)
+
+  x = ResNetBlock(channels=256, down_sample=True)(x)
+  x = ResNetBlock(channels=256)(x)
+
+  x = ResNetBlock(channels=512, down_sample=True)(x)
+  x = ResNetBlock(channels=512)(x)
+
+  x = tf.keras.layers.Flatten()(x)
+  output = tf.keras.layers.Dense(num_classes, activation='softmax')(x)
+
+  model = tf.keras.Model(inputs=input, outputs=[output, encoded])
+
+  return model
+
+
+class ResNetBlock(tf.keras.layers.Layer):
+
+  def __init__(self, channels, down_sample=False, **kwargs):
+      super(ResNetBlock, self).__init__(**kwargs)
+
+      self.__down_sample = down_sample
+      self.__strides = [2, 1] if down_sample else [1, 1]
+
+      self.conv0 = tf.keras.layers.Conv2D(
+          filters=channels,
+          kernel_size=(3,3),
+          strides=self.__strides[0],
+          padding="same",
+          kernel_initializer='he_normal',
+          kernel_regularizer=regularizer,
+          bias_regularizer=regularizer
+      )
+      self.d0 = tf.keras.layers.Dropout(rate=0.3)
+      self.bn0 = tf.keras.layers.BatchNormalization()
+          
+      self.conv1 = tf.keras.layers.Conv2D(
+          filters=channels,
+          kernel_size=(3,3),
+          strides=self.__strides[1],
+          padding="same",
+          kernel_initializer='he_normal',
+          kernel_regularizer=regularizer,
+          bias_regularizer=regularizer
+      )
+      self.d1 = tf.keras.layers.Dropout(rate=0.3)
+      self.bn1 = tf.keras.layers.BatchNormalization()
+
+    self.merge = tf.keras.layers.Add()
+
+    if self.__down_sample:
+
+        self.res_conv = tf.keras.layers.Conv2D(
+            filters=channels, 
+            strides=2,
+            kernel_size=(1,1),
+            kernel_initializer="he_normal",
+            padding="same",
+            kernel_regularizer=regularizer,
+            bias_regularizer=regularizer
+        )
+        self.res_d = tf.keras.layers.Dropout(rate=0.3)
+        self.res_bn = tf.keras.layers.BatchNormalization()
+
+    def call(self, inputs, training=None):
+        res = inputs
+
+        x = self.conv0(inputs)
+        x = self.d0(x, training)
+        x = self.bn0(x, training)
+        x = tf.nn.relu(x)
+        x = self.conv1(x)
+        x = self.d1(x, training)
+        x = self.bn1(x, training)
+
+        if self.__down_sample:
+            res = self.res_conv(res)
+            res = self.res_d(res, training)
+            res = self.res_bn(res, training)
+
+        x = self.merge([x, res])
+        out = tf.nn.relu(x)
+
+        return out
 ```
 
-The code for the 'student' transformer: 
+The code for the 'student' transformer:
 
 ```python
+def create_septr_encoded_student(
+  input_dim,
+  patch_size, 
+  embed_dim,
+  num_layers,
+  num_heads,
+  mlp_dims,
+  dropout_rate,
+  num_classes
+):
+
+    input = tf.keras.Input(shape=input_dim)
+
+    mean_cls, mean_dist = SepTr(
+      input_dim, patch_size, embed_dim, num_layers, num_heads, mlp_dims, dropout_rate
+    )(input)
+
+    ce_output = tf.keras.layers.Dense(num_classes, activation='softmax', name="cls_output")(mean_cls)
+    t_output = tf.keras.layers.Dense(num_classes, activation='softmax', name="distillation_output")(mean_dist)
+
+    return tf.keras.Model(inputs=input, outputs=[ce_output, t_output])
+```
+
+We can visualize the training procedure of DeSepTr in Figure 4.
+
+<div style="text-align: center;">
+  <img src="/blog/academic/deseptr/deseptr.pdf" alt="deseptr">
+  <figcaption>Figure 4. Diagram of DeSepTr</figcaption>
+</div>
+<br>
+
+The code for the training procedure:
+
+```python
+class CustomDeiT(tf.keras.Model):
+
+    def __init__(self, student, teacher, encoder, **kwargs):
+        super(CustomDeiT, self).__init__(**kwargs)
+
+        self.teacher = teacher
+        self.student = student
+        self.encoder = encoder
+
+    def compile(
+        self,
+        optimizer,
+        metrics,
+        student_loss_fn,
+        distillation_loss_fn
+    ):
+        super().compile(optimizer=optimizer, metrics=metrics)
+        self.student_loss_fn = student_loss_fn
+
+        self.distillation_loss_fn = distillation_loss_fn
+
+    def train_step(self, data):
+
+        # unpack the data
+        x, y, sample_weight = data
+
+        # get the predictions from the teacher model 
+        teacher_predictions = self.teacher(x, training=False)
+
+        encoded_x = self.encoder(x, training=True)
+
+        with tf.GradientTape() as tape:
+
+            # get the class and distillation tokens from the student model 
+            student_output = self.student(encoded_x, training=True)
+
+            # get the predicitions from the student loss function
+            student_loss = self.student_loss_fn(y, student_output[0], sample_weight)
+
+            # get the distillation loss from the teacher predictions 
+            distillation_loss = self.distillation_loss_fn(teacher_predictions, student_output[1], sample_weight)
+
+            # compute the overall loss 
+            loss = (0.5 * student_loss) + (0.5 * distillation_loss)
+
+        # compute the gradients
+        trainable_vars = self.student.trainable_variables
+        gradients = tape.gradient(loss, trainable_vars)
+
+        # update the weights
+        self.optimizer.apply_gradients(zip(gradients, trainable_vars))
+
+        self.compiled_metrics.update_state(y, student_output[0])
+
+        results = {m.name: m.result() for m in self.metrics}
+
+        results.update(
+            {
+                "student_loss": student_loss, 
+                "distillation_loss": distillation_loss,
+                "loss": loss
+            }
+        )
+
+        return results
+
+    def test_step(self, data):
+
+        x, y = data
+
+        encoded_x = self.encoder(x, training=False)
+
+        teacher_predictions = self.teacher(x, training=False)
+
+        y_prediction = self.student(encoded_x, training=False)
+
+        student_loss = self.student_loss_fn(y, y_prediction[0])
+
+        distillation_loss = self.distillation_loss_fn(teacher_predictions, y_prediction[1])
+
+        loss = (0.5 * student_loss) + (0.5 * distillation_loss)
+
+        self.compiled_metrics.update_state(y, y_prediction[0])
+
+        results = {m.name: m.result() for m in self.metrics}
+
+        results.update(
+            {
+                "student_loss": student_loss,
+                "distillation_loss": distillation_loss,
+                "loss": loss
+            }
+        )
+
+        return results
+
+    def custom_predict(self, X):
+
+        encoded_X = self.encoder(X, training=False)
+
+        y_prediction = self.student(encoded_X, training=False)
+
+        return y_prediction[0]
+```
+
+Example for using the training procedure:
+
+```python
+
+teacher_callback = tf.keras.callbacks.EarlyStopping(
+    monitor='val_loss', 
+    patience=10,
+    mode='min',
+    restore_best_weights=True
+)
+student_callback = tf.keras.callbacks.EarlyStopping(
+    monitor='val_loss', 
+    patience=10,
+    mode='min',
+    restore_best_weights=True
+)
+
+# get the class weights
+sample_weights = class_weight.compute_class_weight(
+    class_weight='balanced',
+    classes=list(range(num_classes)),
+    y=train.label.to_numpy().tolist()
+).tolist()
+
+weight_dict = dict()
+for i, weight in enumerate(sample_weights):
+    weight_dict[i] = weight
+
+teacher.compile(
+    optimizer=tf.keras.optimizers.experimental.AdamW(learning_rate=params["training"]["teacher"]["lr"]),
+    loss = tf.keras.losses.CategoricalCrossentropy(label_smoothing=0.1),
+    metrics=[tf.keras.metrics.CategoricalAccuracy()]
+)
+
+teacher.fit(
+    X_train, 
+    Y_train, 
+    batch_size=batch_size
+    epochs=epochs,, 
+    validation_data=(X_val, Y_val), 
+    verbose=2, 
+    callbacks=[teacher_callback, TeacherLoggingCallback()],
+    class_weight=weight_dict
+)
+
+teacher_val_output = teacher.evaluate(X_val, Y_val, verbose=2)
+teacher_test_output = teacher.evaluate(X_test, Y_test, verbose=2)
+
+distiller = CustomDeiT(student, teacher, encoder)
+
+distiller.compile(
+    optimizer=tf.keras.optimizers.experimental.AdamW(learning_rate=learning_rate),
+    metrics=[tf.keras.metrics.CategoricalAccuracy()],
+    student_loss_fn=tf.keras.losses.CategoricalCrossentropy(label_smoothing=0.1),
+    distillation_loss_fn=tf.keras.losses.CategoricalCrossentropy(label_smoothing=0.1),
+)
+
+student_history = distiller.fit(
+    X_train, 
+    Y_train, 
+    batch_size=batch_size, 
+    epochs=epochs, 
+    validation_data=(X_val, Y_val),
+    verbose=2, 
+    callbacks=[student_callback, StudentLoggingCallback()],
+    class_weight=weight_dict
+)
+
+deseptr_val_output = distiller.evaluate(X_val, Y_val, verbose=2)
+deseptr_test_output = distiller.evaluate(X_test, Y_test, verbose=2)
 
 ```
 
 ### Experiments
 
+We evaluated our proposed framework on the following datasets:
+
+1. [A database of human gait performance on irregular and uneven surfaces collected by wearable sensors](https://www.nature.com/articles/s41597-020-0563-y)
+2. [PAMAP2 Physical Activity Monitoring](https://archive.ics.uci.edu/dataset/231/pamap2+physical+activity+monitoring)
+3. [Daphnet Freezing of Gait](https://archive.ics.uci.edu/dataset/245/daphnet+freezing+of+gait)
+
+The results from the surface condition recognition where the data originated from the right-shank device are presented in Table 1 and Figure 5.
+
+<div style="text-align: center;">
+  <img src="/blog/academic/deseptr/tab_surface.png" alt="tab_surface" style="width: 70%; max-width: 600px;">
+  <figcaption>Table 1. Results from the surface condition recognition dataset.</figcaption>
+</div>
+<br>
+
+<div style="text-align: center;">
+  <img src="/blog/academic/deseptr/conf_mat.png" alt="conf_mat" style="width: 70%; max-width: 600px;">
+  <figcaption>Figure 5. Confusion matrices for DeSepTr from the surface condition recognition dataset</figcaption>
+</div>
+<br>
+
+The results from the PAMPA2 dataset where the data originated from the ankle device are presented in Table 2.
+
+<div style="text-align: center;">
+  <img src="/blog/academic/deseptr/tab_activity.png" alt="tab_activity" style="width: 70%; max-width: 600px;">
+  <figcaption>Table 2. Results from the PAMPA2 dataset.</figcaption>
+</div>
+<br>
+
+The results from the Daphnet dataset where the data originated from the shank device are presented in Table 3.
+
+<div style="text-align: center;">
+  <img src="/blog/academic/deseptr/tab_fog.png" alt="tab_fog" style="width: 70%; max-width: 600px;">
+  <figcaption>Table 2. Results from the Daphnet dataset.</figcaption>
+</div>
+<br>
+
+We can see that adopting the DeSepTr framework offers improvements on the original ViT and SepTr architectures for the different wearable sensor applications.
+
 ---
 
 ## Conclusion
+
+I hope this blog has provided you with the technical code to implement DeSepTr for your own spectrogram implementations. This was my first real deep learning (DL) publication and I had a lot of fun devising my own architecture for analyzing datasets relevant to my PhD. Ultimately, DeSepTr did not find its way into my PhD, however, I've recently published my Data Efficient Sensor Transformer (DesT) and Federated Data Efficient Sensor Transformer (FeDesT) in the special session on [Federated Learning for Big Data](https://www3.cs.stonybrook.edu/~ieeebigdata2024/SpecialSessions.html#SpecialSession8) at the [2024 IEEE Big Data conference](https://www3.cs.stonybrook.edu/~ieeebigdata2024/index.html). I will be writing a blog for DesT and FeDesT for my presentation to help keep the code free and transparent.
+
+I've recently focused on revamping my professional website for my career. This has given me the push to publish the code for my PhD research. Revisiting this paper I have found a few things that needed corrected and have digged out the supporting code. If there's any errors please feel free to [contact me](/contact) and I'll try and rectify any issues.
+
+If you have benefited from any of the content in this blog please drop me a reference wherever appropriate! I would also appreciate shoutouts on Twitter (X), Reddit ([r/MachineLearning](https://www.reddit.com/r/MachineLearning/)), or LinkedIn.
+
+1. McQuire, J., Watson, P., Wright, N., Hiden, H. and Catt, M., 2023, July. A Data Efficient Vision Transformer for Robust Human Activity Recognition from the Spectrograms of Wearable Sensor Data. In 2023 IEEE Statistical Signal Processing Workshop (SSP) (pp. 364-368). IEEE.
 
 ---
 

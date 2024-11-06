@@ -44,7 +44,7 @@ disableKinds = ["taxonomy", "term"]
 
   [markup.highlight]
     noClasses = false
-    style = "monokai"  # Or your preferred theme
+    style = "github"  # Or your preferred theme
 
 [menu]
   [[menu.main]]
