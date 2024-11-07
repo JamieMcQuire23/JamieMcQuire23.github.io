@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:53241/</loc>
+    <loc>http://localhost:52033/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:53241/blog/</loc>
+    <loc>http://localhost:52033/blog/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:53241/blog/academic/deseptr/deseptr/</loc>
+    <loc>http://localhost:52033/blog/academic/deseptr/deseptr/</loc>
   </url><url>
-    <loc>http://localhost:53241/contact/</loc>
+    <loc>http://localhost:52033/contact/</loc>
   </url>
 </urlset>

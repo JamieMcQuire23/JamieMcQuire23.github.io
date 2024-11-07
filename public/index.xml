@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About on Jamie McQuire</title>
-    <link>http://localhost:53241/</link>
+    <link>http://localhost:52033/</link>
     <description>Recent content in About on Jamie McQuire</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:53241/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:52033/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog</title>
-      <link>http://localhost:53241/blog/</link>
+      <link>http://localhost:52033/blog/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53241/blog/</guid>
-      <description>&lt;h2 id=&#34;academic&#34;&gt;Academic&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:53241/blog/academic/deseptr/deseptr&#34;&gt;ViTs for Wearable Sensor Spectrogram Analysis&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+      <guid>http://localhost:52033/blog/</guid>
+      <description>&lt;h2 id=&#34;academic&#34;&gt;Academic&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:52033/blog/academic/deseptr/deseptr&#34;&gt;ViTs for Wearable Sensor Spectrogram Analysis&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:53241/blog/academic/deseptr/deseptr/</link>
+      <link>http://localhost:52033/blog/academic/deseptr/deseptr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53241/blog/academic/deseptr/deseptr/</guid>
+      <guid>http://localhost:52033/blog/academic/deseptr/deseptr/</guid>
       <description>&lt;h1 id=&#34;vits-for-wearable-sensor-spectrogram-analysis-with-deseptr&#34;&gt;ViTs for Wearable Sensor Spectrogram Analysis with DeSepTr&lt;/h1&gt;&#xA;&lt;p&gt;This is a blog that I have wrote in conjunction with my paper: &lt;a href=&#34;https://ieeexplore.ieee.org/document/10208059/citations?tabFilter=papers#citations&#34;&gt;A Data Efficient Vision Transformer for Robust Human Activity Recognition from the Spectrograms of Wearable Sensor Data&lt;/a&gt;. If you would like access feel free to reach out!&lt;/p&gt;&#xA;&lt;p&gt;In this blog, I am going to provide the code for implementing the Data Efficient Separable Transformer (DeSepTr). This is a modification of the &lt;a href=&#34;https://arxiv.org/abs/2203.09581&#34;&gt;Separable Transformer (SepTr)&lt;/a&gt; [1] which was developed for analyzing wearable sensor spectrograms with computer vision (CV) techniques. The research application of this paper was for wearable sensor analysis, however, I&amp;rsquo;m sure someone can reapply this work to audio and compare to the original SepTr.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Contact</title>
-      <link>http://localhost:53241/contact/</link>
+      <link>http://localhost:52033/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53241/contact/</guid>
+      <guid>http://localhost:52033/contact/</guid>
       <description>&lt;h2 id=&#34;contact-information&#34;&gt;Contact Information&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Personal Email: &lt;a href=&#34;mailto:jamiemcquire23@gmail.com&#34;&gt;jamiemcquire23@gmail.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Academic Email: &lt;a href=&#34;J.Mcquire2@newcastle.ac.uk&#34;&gt;J.Mcquire2@newcastle.ac.uk&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Phone: &lt;a href=&#34;tel:+1-559-779-2066&#34;&gt;+1-559-779-2066&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;mailing-address&#34;&gt;Mailing Address&lt;/h2&gt;&#xA;&lt;p&gt;Please email me for this informaiton.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;thesis-access&#34;&gt;Thesis Access&lt;/h2&gt;&#xA;&lt;p&gt;Currently, my PhD thesis cannot be publically disseminated. If you are interested, please email me and we can set up a call to discuss my work.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;social&#34;&gt;Social&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/in/jamie-mcquire-a102b0163/&#34;&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.github.com/JamieMcQuire23&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://scholar.google.com/citations?hl=en&amp;amp;view_op=list_works&amp;amp;gmla=AL3_zihE7uqkkUt5ljphUUx3_iYcTv68QWnL340OMBjIxQTpM5WI9EsFlT7ONiHQcASVIY7ajpLSSLfliIFglw&amp;amp;user=t_TC_vYAAAAJ&#34;&gt;Google Scholar&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
     </item>
   </channel>
